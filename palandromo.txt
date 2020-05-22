@@ -1,0 +1,19 @@
+//Data:06/05/2020 By: Guilherme Pereira Loredo - USP - Universidade de São Paulo
+// Codigo: palindromo - palavras que pode ser lidas de tras pra frente
+
+#include <studio.h>
+
+int main(){
+
+
+
+
+
+
+
+
+return 0;
+
+
+
+}
