@@ -15,6 +15,3 @@ int main(){
 	return 0;
 }
 
-void duplica(int *x){
-	*x = (*x)*2;
-}

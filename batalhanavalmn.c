@@ -45,7 +45,7 @@ void pos_navios() {
         }
       }
     }
-
+//gera o tabuleiro
     espacosNavio = 0;
     while (espacosNavio < tamanho) {
 
@@ -110,6 +110,7 @@ void pos_navios() {
     }
     tamanho++;
   }
+  //organiza o tabuleiro
 }
 
 void resetarTabuleiros() {
@@ -154,6 +155,7 @@ void batalhaNaval() {
     cin >> tiro[0];
     cout << "Jogador 1 escolha a coluna alvo do tiro" << '\n' << "Coluna: ";
     cin >> tiro[1];
+    //enquanto nao chegarm a pontucao maxima ira repuitir o processo
 
     while (tabuleiroJ2[tiro[0]][tiro[1]] != "  ~ |" ) {
       cout << "Voce ja atirou nessa posicao anteriormente. Verifique e tente novamente. \n\n";
@@ -161,6 +163,7 @@ void batalhaNaval() {
       cin >> tiro[0];
       cout << "Jogador 1 escolha a coluna alvo do tiro" << '\n' << "Coluna: ";
       cin >> tiro[1];
+      // escolhe a linha despois a coluna para o tiro
     }
 
     for (int linha = 0; linha < 14; linha++) {
@@ -174,6 +177,7 @@ void batalhaNaval() {
         tabuleiroJ2[tiro[0]][tiro[1]] = (char*)"  E |";
         acerto = false;
       }
+      // confere se o jogador acertou o navios, se sim, coloca um x, se nao e add pontos no jogador 1
     }
 
     if (acerto) {
@@ -206,7 +210,7 @@ void batalhaNaval() {
         tabuleiroJ1[tiro[0]][tiro[1]] = (char*)"  E |";
         acerto = false;
       }
-      // confere se o jogador
+      // confere se o jogador acertou o navios, se sim, coloca um x, se nao e  add o acerto na pontuacao no jogadro 2
     }
 
     if (acerto) {
@@ -214,6 +218,7 @@ void batalhaNaval() {
     } else {
       cout << "Jogador 2 atirou no mar.\n";
     }
+    // imprimir se acertou algo
 
     printar_tabuleiro(tabuleiroJ1);
   }
@@ -224,6 +229,7 @@ void batalhaNaval() {
   } else {
     cout << "A partida terminou em empate\n";
   }
+  
 
   cout << "\nDeseja jogar novamente? (S/N): ";
   cin >> jogar;
