@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-//inclusao de bibliotecas obs: usei umas paradas de c++ por conta para rodar, isso por conta de esta usando o celuilar
+//inclusao de bibliotecas obs: usei umas paradas de c++ por conta para rodar, isso por conta de esta usando o celular
 
 char* tabuleiroJ1[10][10];
 char* tabuleiroJ2[10][10];
@@ -56,7 +56,7 @@ void pos_navios() {
         tabuleiroJ1navios[cont][0] = linha + espacosNavio;
         tabuleiroJ1navios[cont][1] = coluna;
       }
-
+	//preencher o barcos no tabuleiro
       espacosNavio++;
       cont++;
     }
@@ -134,6 +134,7 @@ void printar_tabuleiro(char* tabuleiro[][10]) {
     }
     printf("\n");
     cout << "  --------------------------------------------------" << '\n';
+    // foi usado cout e cin para substituir o printf e scanf
   }
   printf("\n");
 }
@@ -205,6 +206,7 @@ void batalhaNaval() {
         tabuleiroJ1[tiro[0]][tiro[1]] = (char*)"  E |";
         acerto = false;
       }
+      // confere se o jogador
     }
 
     if (acerto) {
