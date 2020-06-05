@@ -12,8 +12,11 @@
 
 
        printf("Criar turma? Digite 1");
-       scanf()
-      //abrindo o arquivo com tipo de abertura w
+       scanf("%s", &c)
+       if(c=1){
+           
+       }
+             //abrindo o arquivo com tipo de abertura w
       pont_arq = fopen("arquivo_palavra.txt", "w");
       
       //testando se o arquivo foi realmente criado
