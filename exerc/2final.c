@@ -1,16 +1,14 @@
+
 #include<stdio.h>
 #include <string.h>
 #include<stdlib.h>
-
-#define MAX_ALUNOS 50
-
+#include max_alunos 50
 typedef struct{
 	char nome[15];
-    float notas[4];
+    float nota[4];
     int ativo;
 }aluno;
-
-aluno alunos [ MAX_ALUNOS];
+Aluno alunos [max_alunos];
 
 void menu();
 void cadastrar();
@@ -19,49 +17,45 @@ void reprovados();
 void pesquisar();
 void listar();
 
-int main(int argc, char const *argv[]) {
+int main(int argc, cha const *argv[]) {
     menu();
     return 0;
 }
-
-
 void menu (){
-     system("cls");
-    int op = 1;
+    int op;
     do{
-       
-        printf("\n1 -  Cadrastrar aluno\n2- remover alunos");
-        printf("\n3 -  alunos reprovados\n4- pesquisar aluno");
-        printf("\n5 listar alunos - sair\n");
-        scanf("%d", &op);
-        getchar();
-    switch (op){
-        case 1:
-            cadastrar();
-        break;
-        case 2:
-            remover();
-        break;
-        case 3:
-        printf("adfas");
-          //  reprovados();
-        break;
-        case 4:
-            pesquisar();
-        case 5:
-            listar();
-        break;
+    system("cls");
+    printf("\n1 -  Cadrastrar aluno\n2- remover alunos");
+    printf("\n3 -  alunos reprovados\n4- pesquisar aluno");
+    printf("\n5 listar alunos - sair\n");
+    scanf("%d", &op);
+    getchar();
+    switch (op)
+    {
+    case 1:
+        cadastrar();
+    break;
+    case 2:
+        remover();
+    break;
+    case 3:
+        reprovados();
+    break;
+    case 4:
+         pesquisar();
+    case 5:
+         listar();
+    break;
 
     }
     getchar();
      }while (op != 0);
 
 }
-
 void cadastrar(){
 
     char nome[50];
-    float notas[4];
+    float nota[4];
     int op;
     do
     {
@@ -71,37 +65,38 @@ void cadastrar(){
         printf("\n1 bimestre");
         scanf("%f",&notas[0]);
         printf("\n2 bimestre");
-        scanf("%f", &notas[1]);
+        scanf("%f",&notas[1]);
         printf("\n3  bimestre");
         scanf("%f",&notas[2]);
         printf("\n4 bimestre");
         scanf("%f",&notas[3]);
-        int i;
-        for ( i = 0; i < MAX_ALUNOS; i++){
+        for (int i; i = 0; i < max_alunos; i++)
+        {
             if (alunos[i].ativo==0){
                 alunos[i].notas[0]= notas[0];
                 alunos[i].notas[1]= notas[1];
                 alunos[i].notas[2]= notas[2];
                 alunos[i].notas[3]= notas[3];
                 strcpy(alunos[i].nome, nome);
-                alunos[i].ativo=1;
+                alunos[i].ativo=1/
+                break;
             }
         }
         printf("\n1-contunuar\n0 sair\n");
         scanf("%d", &op);
         getchar ();
-    } while (op!=0);
+    } while (op!-0);
 
 }
 
 void remover(){
     int matricula;
-    void lista();
+    lista();
     printf("\n didgite a matricula do aluno a ser removido:");
     scanf("%d", &matricula);
     -- matricula;
     alunos[matricula].ativo=0;
-    printf("\n alunos foi removido\n");
+    printf("\n alunos ofi removido\n");
     getchar();
 
 }
@@ -110,23 +105,22 @@ void repovados(){
  system ("cls");
  printf("\n lista de alunos reprovados");
  float media;
-    int i;
-    for ( i = 0; i < MAX_ALUNOS; i++)
+    for (int i; i = 0; i < max_alunos; i++)
     {
-        if(alunos[i].ativo==1){
+        if(aluno[i].ativo==1){
         media= 0;
         media =alunos[i].notas[0]+alunos[i].notas[1]+alunos[i].notas[2]+alunos[i].notas[3];
         media = media/4;
-         if (media<7,0)
-         {
-                printf("Matricula: %d\n", i+1);
+        if (media<7,0)
+        {
+                printf("Matricula: %d\n", i+1)
                 printf("\n Nome: %s\n",alunos[i].nome);
                 printf("1 Bim: %f0.2\n", alunos[i].notas[0]);
                 printf("2 Bim: %f0.2\n", alunos[i].notas[1]);
                 printf("3 Bim: %f0.2\n", alunos[i].notas[2]);
                 printf("3 Bim: %f0.2\n", alunos[i].notas[3]);
                 printf("\n --------\n");
-         }
+        }
         }
     }
 }
@@ -139,11 +133,10 @@ void pesquisar(){
      {
          system ("cls");
         printf("\n Digitir o nome do aluno\n");
-        fgets(nome,sizeof(nome), stdin);
-        int i;
-        for (i = 0; i <  MAX_ALUNOS; i++){ 
+        fgets(nome.sizeof(nome), studin);
+        for (int i; i = 0; i < max_alunos; i++){
             if (strstr(alunos[i].nome, nome)!= NULL){
-                printf("Matricula: %d\n", i+1);
+                printf("Matricula: %d\n", i+1)
                 printf("\n Nome: %s\n",alunos[i].nome);
                 printf("1 Bim: %f0.2\n", alunos[i].notas[0]);
                 printf("2 Bim: %f0.2\n", alunos[i].notas[1]);
@@ -152,7 +145,7 @@ void pesquisar(){
                 printf("\n --------\n");
             }
         }
-        printf("\n digite 0 para sair ou 1 para nova pesquisa");
+        printf("\n digite 0 para sair ou 1 para nova pesquisa")
         scanf("%d", &op);
         getchar();
     } while (op!=0);
@@ -161,12 +154,11 @@ void pesquisar(){
 
 void listar(){
     system ("cls");
-    printf("\n lista de alunos\n");
-    int i;
-    for ( i= 0; i < MAX_ALUNOS; i++)
+    printf("\n lista de alunos\n")
+    for (int i; i = 0; i < max_alunos; i++)
     {
-   if(alunos[i].ativo==1){
-            printf("Matricula: %d\n", i+1);
+   if(aluno[i].ativo==1){
+        printf("Matricula: %d\n", i+1)
             printf("\n Nome: %s\n",alunos[i].nome);
             printf("1 Bim: %f0.2\n", alunos[i].notas[0]);
             printf("2 Bim: %f0.2\n", alunos[i].notas[1]);
